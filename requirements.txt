@@ -1,0 +1,8 @@
+numpy
+PySide6
+pyvista
+pyvistaqt
+vtk
+PyYAML
+openpyxl
+pyinstaller

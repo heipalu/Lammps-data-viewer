@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# PyInstaller
+build/
+dist/
+*.spec
+release_source/
+LammpsDataViewer_source.zip
+
+# Local logs and temporary files
+*.log
+log.*
+PasteFile*
+
+# Project data / simulation outputs
+CASHgen/
+data/
+in/
+kaldo/
+MS/
+origin/
+postprocessing/
+RDF/
+serveroutput/
+test/
+vdos/
