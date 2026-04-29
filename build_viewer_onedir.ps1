@@ -1,3 +1,7 @@
+param(
+    [string]$DistPath = ".\dist"
+)
+
 $ErrorActionPreference = "Stop"
 
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
@@ -15,6 +19,7 @@ python -m PyInstaller `
     --onedir `
     --windowed `
     --name LammpsDataViewer `
+    --distpath $DistPath `
     --hidden-import pyvista `
     --hidden-import pyvistaqt `
     --hidden-import pyvistaqt.plotting `
@@ -77,7 +82,6 @@ python -m PyInstaller `
     --exclude-module PySide6.QtWebSockets `
     --exclude-module PySide6.QtWebView `
     --exclude-module PySide6.QtXml `
-    --exclude-module matplotlib `
     --exclude-module pandas `
     --exclude-module scipy `
     --exclude-module selenium `
@@ -94,4 +98,4 @@ if ($LASTEXITCODE -ne 0) {
     throw "PyInstaller build failed with exit code $LASTEXITCODE."
 }
 
-Write-Host "Build complete: .\dist\LammpsDataViewer\LammpsDataViewer.exe"
+Write-Host "Build complete: $DistPath\LammpsDataViewer\LammpsDataViewer.exe"

@@ -15,6 +15,7 @@ env/
 # PyInstaller
 build/
 dist/
+dist_*/
 *.spec
 release_source/
 LammpsDataViewer_source.zip
